@@ -1,0 +1,4 @@
+{
+	"name": "${projectName}",
+	"url": "http://localhost:3001/${projectName}.js"
+}

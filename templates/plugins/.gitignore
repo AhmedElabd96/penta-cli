@@ -1,0 +1,67 @@
+# Node & package managers
+node_modules/
+.pnpm-store/
+.pnpm-debug.log*
+package-lock.json
+yarn.lock
+yarn-error.log
+pnpm-lock.yaml
+
+# Build outputs
+dist/
+build/
+.out/
+coverage/
+.eslintcache
+
+# Environment / secrets
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.envrc
+
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+
+# Misc / tooling
+.cache/
+.tmp/
+.cache-loader
+*.tgz
+*.log
+
+# TypeScript
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+
+
+
+# MacOS Finder tags
+.AppleDouble
+.LSOverride
+
+# Optional: local env for editors/containers
+.vscode/* 
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Docker
+docker-compose.override.yml
+.env.docker
+
+.npmrc

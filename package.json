@@ -1,0 +1,41 @@
+{
+  "name": "@penta-b/cli",
+  "version": "1.0.0",
+  "description": "A CLI tool to generate templates for Penta-B projects",
+  "main": "dist/index.js",
+  "bin": {
+    "penta-cli": "./bin/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "penta-b",
+    "cli",
+    "template",
+    "generator"
+  ],
+  "author": "Penta-B",
+  "license": "ISC",
+  "files": [
+    "dist",
+    "bin",
+    "templates"
+  ],
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.0.0",
+    "fs-extra": "^11.1.1",
+    "ora": "^5.4.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
+    "@types/node": "^20.5.0",
+    "typescript": "^5.1.6"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
