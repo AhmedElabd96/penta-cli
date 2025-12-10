@@ -1,5 +1,5 @@
-import { DefaultComponentProps } from "@/types/default.types";
+import { IDefaultComponentProps } from "@/types/default.types";
 
-export interface TriggerResultProps extends DefaultComponentProps {
+export interface TriggerResultProps extends IDefaultComponentProps {
 	coordinates: [number, number];
 }
