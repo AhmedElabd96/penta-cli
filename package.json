@@ -1,15 +1,19 @@
 {
-  "name": "@penta-b/cli",
+  "name": "@penta-b/penta-cli",
   "version": "1.0.0",
   "description": "A CLI tool to generate templates for Penta-B projects",
   "main": "dist/index.js",
   "bin": {
-    "penta-cli": "./bin/cli.js"
+    "@penta-cli": "./bin/cli.js"
   },
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
     "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jenkins.penta-b.net/pentabdev/penta-cli.git"
   },
   "keywords": [
     "penta-b",
