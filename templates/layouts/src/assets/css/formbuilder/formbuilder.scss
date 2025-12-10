@@ -1,0 +1,199 @@
+/* pbpm - form builder css */
+@import '../variables.scss';
+@import './tabs.scss';
+@import './wizard.scss';
+@import './accordion.scss';
+@import './multiselect.scss';
+@import './ratingField.scss';
+@import './grid.scss';
+@import './validation.scss';
+@import './basicInputs.scss';
+@import './attachment.scss';
+@import './richText.scss';
+@import './dropdown-with-select.scss';
+@import './mapField.scss';
+@import './calender.scss';
+
+    .disabled,
+    .disable_ms {
+        opacity: 0.70;
+    }
+
+    option:hover,
+    option:focus {
+        background-color: #8E8E8E;
+    }
+
+    .penta-form .penta-next,
+    .penta-form .penta-previous {
+        background-color: transparent;
+        color: var(--main-dark-gray);
+        border: none;
+        font-size: var(--input-font-size);
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        text-transform: capitalize;
+
+        span {
+            width: 25px;
+        }
+
+        span svg {
+            fill: var(--main-dark-gray);
+            height: 16px;
+            width: 16px
+        }
+    }
+
+    .penta-previous-ar .step-prev-arrow-container,
+    .penta-next-ar .step-next-arrow-container {
+        transform: rotate(180deg);
+    }
+
+    .wiz-next {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .penta-form span.penta-required-field,
+    .penta-form span.penta-form-item-asterisk {
+        color: #DA1414;
+        opacity: 0.8;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 20px;
+    }
+
+
+    .penta-buttons-container {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+    }
+
+
+    .psf-validation-message {
+        padding: 6px 8px 6px 16px;
+        border-radius: 8px;
+        background: #FFF4EC;
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .penta-form,
+    .penta-smart-forms {
+        padding: 10px;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        gap: 0px;
+        grid-row-gap: 10px;
+        flex-direction: column;
+        /* align-items: baseline; */
+
+        .penta-form-item {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin: 0;
+            align-items: start;
+
+            .penta-form-item-list {
+                border: 1px solid #b0bec5;
+                padding: 8px;
+            }
+        }
+
+        .penta-form-item>:nth-child(2) {
+            /**override mna**/
+            flex: none;
+        }
+
+        .penta-form-item>:nth-child(2):has(.penta-textarea.penta-inside-error) {
+            flex: 1;
+        }
+
+        .fb-field-label {
+            /* padding: 0px 16px; */
+            margin: 0;
+            font-size: var(--input-font-size);
+            font-weight: 600;
+            line-height: 24px;
+            color: var(--input-fg);
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 4px;
+        }
+
+        .penta-form-header-container {
+            display: flex;
+            gap: 4px;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        /* custom case wz SE, class to hide some fields */
+        .hidden {
+            display: none;
+        }
+
+    }
+
+    .accordion {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .penta-card-main-container {
+            /* padding: 6px 12px; */
+            gap: 12px;
+            border-radius: 6px !important;
+            background: var(--card-bg-color);
+            border: 1px;
+        }
+
+        .card-header {
+            background: transparent;
+            color: var(--main-dark-gray);
+            /* padding: 0px 12px; */
+            border-bottom: 0;
+        }
+
+    }
+
+
+/***
+text input inside grid (place holder, padding , coloring, alignment ) - DONE
+select main - DONE - options (hight/highlight) lesa
+
+Wizard - need active wz error (mayar)
+**/
+
+
+/**DONE
+label + required icon
+penta-form-item
+input - text
+radio
+checkbox
+tabs
+color-picker
+disclaimer
+accordion
+buttons
+rating
+Wizard
+multi-dropdown
+
+
+validation(tabs, accordion, wizard, text-input, checkbox group)
+inline-tooltip
+on-demand tooltip
+**/

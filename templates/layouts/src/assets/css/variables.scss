@@ -1,0 +1,59 @@
+/* CSS Variables */
+:root {
+  /* Colors */
+  --main-dark-gray: #424242;
+  --main-light-gray: #f5f5f5;
+  --card-bg-color: #ffffff;
+  --main-color: #0789C1;
+  --sub-color-dark: #757575;
+  --main-bg-color: #fafafa;
+  --main-fg-color: #212121;
+  --white-color: #ffffff;
+  --primary-color: #0789C1;
+  --gray-900: #263238;
+  --muted: #BCBFC1;
+  --subtle: #6E767A;
+  
+  /* Header colors */
+  --main-header-bg: #0789C1;
+  --main-header-fg: #ffffff;
+  --header-menu-border: #e0e0e0;
+  
+  /* Error colors */
+  --main-error-color-bg: #f44336;
+  --main-error-color-fg: #ffffff;
+  --input-error-color: #f44336;
+  
+  /* Wizard colors */
+  --penta-wizard-active-color: #4caf50;
+  --penta-wizard-completeColor: #4caf50;
+  
+  /* Accordion colors */
+  --penta-accordion-head-bg: #f5f5f5;
+  --penta-accordion-head-fg: #424242;
+  --penta-accordion-head-shadow: rgba(0,0,0,0.1);
+  
+  /* Input styles */
+  --input-font-size: 14px;
+  --input-font-size-sm: 12px;
+  --input-font-size-m: 13px;
+  --input-fg: #212121;
+  --input-padding: 10px 12px;
+  --input-border: 1px solid #e9ebeb;
+  --input-border-error: 1px solid #EF4444;
+  --input-height: 40px;
+  --textarea-height: 80px;
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --margin-medium: 16px;
+  
+  /* Border radius */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-medium: 6px;
+  --border-style: 1px solid #d0d0d0;
+}

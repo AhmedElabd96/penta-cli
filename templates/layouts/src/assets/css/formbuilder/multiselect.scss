@@ -1,0 +1,63 @@
+ 
+
+    .penta-form,
+    .penta-smart-forms {
+
+        /*multi dropdown*/
+        .multiSelectContainer {
+            ul {
+                text-align: start;
+                font-size: var(--input-font-size-sm);
+                color: var(--input-fg);
+            }
+
+            li.option {
+                background: var(--main-header-bg);
+                color: var(--main-header-fg) !important;
+            }
+
+            li.option.highlightOption.highlight {
+                /* background: #8e8a8ae5;
+                color: var(--main-header-bg) !important; */
+            }
+
+            li:hover {
+                /* background: var(--main-header-fg);
+                color: var(--main-header-bg) !important; */
+                background: #8e8a8ae5;
+                color: var(--main-header-bg) !important;
+            }
+
+            .chip {
+                padding: 6px 10px;
+                color: white !important;
+                gap: 4px;
+                border: 0.8px solid var(--main-header-bg);
+                opacity: 1;
+                float: right;
+
+                .custom-close {
+                    display: flex;
+                    width: 15px;
+                    cursor: pointer;
+                }
+                
+            }
+
+            .notFound {
+                background: var(--main-header-bg);
+                color: var(--main-header-fg);
+            }
+
+            .search-wrapper {
+                display: flex;
+                flex-wrap: wrap;
+
+                .icon_cancel {
+                    transform: none;
+                    top: unset;
+                    bottom: 15px;
+                }
+            }
+        }
+    }

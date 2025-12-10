@@ -1,0 +1,96 @@
+pipeline {
+    agent any
+
+    environment {
+        REGISTRY_NAME = credentials('REGISTRY_NAME')  // Assuming you have stored it as a Jenkins credential
+        SERVER_NAME = credentials('SERVER_NAME')      // Assuming you have stored it as a Jenkins credential
+        SSH_CREDENTIALS = 'ssh-key-devstable'                // Your SSH credentials ID for the server
+        // Shared counter file location (persistent across builds)
+        COUNTER_FILE = "/var/jenkins_home/tag_counters/${projectName}.counter"
+    }
+
+    stages {
+        stage('Checkout') {
+            when{
+                branch 'dev'
+            }
+            steps {
+                checkout scm  // This will check out the code from GitLab automatically
+            }
+        }
+         stage('Generate Unique Tag') {
+            when{
+                branch 'dev'
+            }
+            steps {
+                script {
+                    // Create directory if it doesn't exist
+                    sh "mkdir -p /var/jenkins_home/tag_counters"
+                    
+                    // Initialize counter file if missing
+                    if (!fileExists(env.COUNTER_FILE)) {
+                        sh "echo 0 > ${env.COUNTER_FILE}"
+                    }
+                    
+                    // Atomic increment using shell commands
+                    env.TAG = sh(script: """
+                        # Use file locking via flock
+                        flock ${env.COUNTER_FILE} -c 'read current < ${env.COUNTER_FILE}; echo \$((current + 1)) > ${env.COUNTER_FILE}; echo \$((current + 1))'
+                    """, returnStdout: true).trim()
+                    
+                    env.TAG = "release.${env.TAG}"
+                    echo "Using tag: ${env.TAG}"
+                }
+            }
+        }
+
+        stage('Build and Push Docker Image') {
+            when{
+                branch 'dev'
+            }
+            steps {
+                script {
+                    // Build and push the Docker image
+                    sh """
+                        az acr login --name $REGISTRY_NAME
+                        docker build -t $SERVER_NAME/${projectName}:$TAG -f Dockerfile .
+                        az acr login --name $REGISTRY_NAME
+                        docker push $SERVER_NAME/${projectName}:$TAG
+                    """
+                }
+            }
+        }
+
+        stage('Deploy to Staging') {
+            when{
+                branch 'dev'
+            }
+            steps {
+                script {
+                    sshagent([SSH_CREDENTIALS]) {
+                        // Deploy to the server over SSH
+                        sh """
+                            ssh penta@devstable.penta-b.net "echo '${projectName}' | ./removecontainer.sh && \
+                            az acr login --name $REGISTRY_NAME && \
+                            docker pull $SERVER_NAME/${projectName}:$TAG && \
+                            sudo docker run -d --name ${projectName} \
+                            -e KEYCLOAK_URL=https://devstable.penta-b.net:8443/auth \
+                            -p ${port}:80 --restart always $SERVER_NAME/${projectName}:$TAG"
+                        """
+                    }
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Cleaning up...'
+        }
+        failure {
+            echo 'Build failed!'
+        }
+    }
+}
+
+

@@ -1,0 +1,160 @@
+ 
+
+    .penta-form,
+    .penta-smart-forms {
+
+        .penta-inline-tooltip {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            gap: 4px;
+            align-items: center;
+            color: #394452;
+            border: none !important;
+
+            p {
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 20px;
+                text-align: start;
+            }
+
+            ;
+
+            svg {
+                flex-shrink: 0;
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+
+        .penta-on-demand-tooltip-container {
+            display: flex;
+            flex-direction: row;
+            gap: 4px;
+
+            .penta-on-demand-tooltip {
+                display: flex;
+                align-items: center;
+                
+                svg {
+                    width: 16px;
+                    height: 16px;
+                    color: #394452;
+                }
+            }
+
+            p {
+                display: none;
+                min-width: 200px;
+                background-color: var(--main-header-bg);
+                color: var(--main-header-fg);
+                text-align: start;
+                padding: 5px;
+                border-radius: 4px;
+                position: absolute;
+                z-index: 1;
+                bottom: 25px;
+                left: 30px;
+                margin-inline-start: -15px;
+                border: 1px solid #858C94;
+                box-shadow: 0px 2px 2px 0px #00000026;
+            }
+
+            .penta-on-demand-tooltip:hover+p {
+                display: block;
+            }
+
+        }
+
+
+        .penta-form-error-input-icon {
+            padding: 4px;
+
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+
+            p {
+                display: none;
+                background: #F02D2DC7;
+                border-radius: 4px;
+                color: white;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 14.58px;
+                text-align: start;
+                padding: 8px 11px;
+                position: absolute;
+                z-index: 1;
+                bottom: 36px;
+                left: unset;
+                right: 0;
+                width: fit-content;
+                min-width: 200px;
+            }
+
+            svg:hover+p {
+                display: block;
+            }
+
+        }
+
+        /* special case for textArea error */
+        .penta-input-icon:has(.penta-textarea) {  
+            .penta-form-error-input-icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+
+        .penta-form-footer .penta-form-error {
+            display: flex;
+            flex-direction: row;
+            gap: 4px;
+            justify-content: start;
+            align-items: center;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 20px;
+            color: var(--input-error-color);
+
+            svg {
+                flex-shrink: 0;
+                width: 16px;
+                height: 20px;
+            }
+        }
+    }
+
+
+
+.ar  
+
+    .penta-form,
+    .penta-smart-forms {
+        .penta-on-demand-tooltip-container {
+            p {
+                left: unset;
+                right: 30px;
+            }
+        }
+
+        .penta-form-error-input-icon {
+            p {
+                left: 0;
+                right: unset;
+            }
+        }
+
+        .penta-input-icon:has(.penta-textarea) {  
+            .penta-form-error-input-icon {
+                left: 0;
+                right: unset;
+            }
+        }
+    }
+

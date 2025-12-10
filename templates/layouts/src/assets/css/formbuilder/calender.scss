@@ -1,0 +1,23 @@
+.penta-form,
+.penta-smart-forms {
+    .react-datepicker__close-icon {
+        right: 4px;
+        left: unset;
+    }
+
+    .react-datepicker__close-icon::after {
+        background-color: transparent;
+        color: var(--main-header-fg);
+        font-size: 20px;
+    }
+}
+
+.ar {
+    .penta-form,
+    .penta-smart-forms {
+        .react-datepicker__close-icon {
+            right: unset;
+            left: 4px;
+        }
+    }
+}

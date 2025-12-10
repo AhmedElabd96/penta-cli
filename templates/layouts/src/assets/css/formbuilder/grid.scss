@@ -1,0 +1,287 @@
+ 
+
+    .penta-form,
+    .penta-smart-forms {
+
+        .penta-table-container {
+            text-align: center;
+            font-size: 12px;
+            width: 100%;
+            box-shadow: 0px 2px 2px 0px #00000012;
+            overflow: auto;
+            padding: 8px 0px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            .penta-table {
+                width: 100%;
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            .penta-container-space-between {
+                display: flex;
+                gap: 1px;
+            }
+
+            /* inputs inside grid */
+            input,
+            textarea,
+            select,
+            label,
+            .fb-field-label {
+                font-size: 12px;
+                text-wrap: wrap;
+
+                option {
+                    font-size: 12px;
+                    text-wrap: wrap;
+                }
+            }
+
+            .penta-pagination-container {
+                div {
+                    display: flex;
+                    gap: 6px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 20px;
+                    text-align: center;
+                    opacity: 0.8;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .penta-textbox {
+                    padding: 7px 5px;
+                    gap: 5px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+
+                .penta-pagination-buttons-swipe {
+                    color: var(--main-fg-color);
+                    padding: 7px 5px;
+                    /* gap: 24px; */
+                    border-radius: 4px;
+                    border: 1px solid var(--sub-color-dark);
+                    display: flex;
+                    gap: 20px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 20px;
+                    text-align: center;
+
+                    .penta-button {
+                        cursor: pointer;
+                        padding: 0px 20px;
+                    }
+
+                    span.active {
+                        font-size: 20px;
+                        font-weight: 700;
+                    }
+
+                    svg path {
+                        fill: var(--main-fg-color);
+                    }
+                }
+            }
+
+            .penta-table-head-icon-container {
+                display: flex;
+
+                .penta-table-head-icon {
+                    cursor: pointer;
+                }
+            }
+
+            thead {
+                background-color: var(--main-header-bg);
+                color: var(--main-header-fg);
+            }
+
+            th {
+                min-width: 180px;
+                vertical-align: baseline;
+                padding: 10px;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 17.01px;
+                text-align: center;
+
+                .penta-form-item {
+                    padding-top: 3px;
+                }
+            }
+
+            th.selector {
+                min-width: 50px;
+            }
+
+            td {
+                /* vertical-align: baseline; */
+                vertical-align: bottom;
+            }
+
+            td.penta-table-no-data {
+                height: 50px;
+                align-content: center;
+            }
+
+            td:has(.penta-buttons-container) {
+                vertical-align: middle;
+            }
+
+            td>.penta-form-item {
+                padding: 20px 13px;
+                min-width: 200px;
+            }
+
+            /* Using group to display multi fields in single grid's column*/
+            td>.penta-form-item:has(.penta-object-item) {
+                padding: 10px 13px;
+
+                .penta-group-row.penta-form.penta-smart-forms {
+                    padding: 0;
+                }
+            }
+
+            /*borders*/
+            td,
+            th {
+                border: 1px solid #CECECE;
+                width: 1%;
+            }
+
+            tr:first-child th {
+                border-top: 0;
+            }
+
+            tr:last-child td {
+                border-bottom: 0;
+            }
+
+            tr {
+                border-bottom: 1px solid #CECECE;
+
+                td:first-child,
+                th:first-child {
+                    border-left: 0;
+                }
+
+                td:last-child,
+                th:last-child {
+                    border-right: 0;
+                }
+            }
+
+            /*end borders*/
+            .penta-buttons-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 12px;
+
+                .penta-button,
+                .penta-button-icon {
+                    padding: 0;
+                    border: 0;
+                    background: transparent;
+                    box-shadow: none;
+                    color: var(--main-header-fg);
+                    opacity: 0.80;
+
+                    i {
+                        font-size: 20px;
+                    }
+                }
+
+                .summary-icon {
+                    padding: 2px 6px;
+                    border-radius: 6px;
+                    border: 1px solid #000000;
+
+                    span {
+                        display: none;
+                    }
+                }
+
+                .gridSave {
+                    span>svg {
+                        transform: scale(1.4);
+                    }
+                }
+
+                span>svg {
+                    width: 20px;
+                    height: 20px;
+                    border: 0px;
+
+                    path {
+                        fill: var(--main-header-fg)
+                    }
+                }
+            }
+
+            .penta-buttons-container:has(.summary-icon) {
+                /* justify-content: space-evenly; */
+                gap: 22px;
+                padding: 4px 0px;
+            }
+        }
+
+        /* summaryGrid */
+        .penta-table-summary {
+            td {
+                vertical-align: middle;
+            }
+        }
+
+        /* List-view */
+        .penta-list-viwe,
+        .penta-list-view {
+            border: 0.5px solid var(--header-menu-border);
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    }
+
+
+.ar {
+     
+
+        .penta-form,
+        .penta-smart-forms {
+            .penta-table-container {
+
+                /*borders*/
+                tr {
+
+                    td:first-child,
+                    th:first-child {
+                        border-right: 0;
+                        border-left: 1px solid #CECECE;
+                    }
+
+                    td:last-child,
+                    th:last-child {
+                        border-left: 0;
+                        border-right: 1px solid #CECECE;
+                    }
+                }
+
+                /*end borders*/
+
+                .penta-pagination-container {
+                    .penta-button svg {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+    }

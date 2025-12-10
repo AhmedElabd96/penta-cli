@@ -1,0 +1,79 @@
+    /* tabs */
+     
+        .penta-form,
+        .penta-smart-forms {
+
+            .penta-toolbar-container {
+                padding: 6px 0px;
+                display: flex;
+                gap: 12px;
+                justify-content: start;
+                flex-direction: column;
+                border-radius: 6px;
+                box-shadow: 0px 2px 2px 0px #00000040;
+                background: #F8F9FC;
+
+                .penta-toolbar.penta-tabs-container {
+                    padding: 0 6px;
+                    border-bottom: 1px solid #CECECE;
+                    /* border-radius: 7px; */
+                    /* box-shadow: 0px 2px 2px 0px #00000040; */
+                    /* background: #F8F9FC; */
+                    gap: 16px;
+                }
+
+                .penta-toolbar>li {
+                    cursor: pointer;
+                    color: #333333;
+                    border-radius: 2px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 22px;
+                    padding: 9px 16px;
+                    box-shadow: 0px -1px 0px 0px #FFFFFF00 inset;
+                }
+
+                .penta-toolbar>li.active {
+                    color: var(--main-color);
+                    border-bottom: 3px solid var(--main-color);
+                    font-weight: 600;
+                }
+
+                .penta-toolbar>li.penta-tab-error {
+                    background-color: var(--main-error-color-bg);
+                    color: var(--main-error-color-fg);
+                }
+
+                .penta-toolbar-body {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 24px;
+                    padding: 0 12px;
+
+                    .penta-button-svg-title-background {
+                        display: flex;
+                        padding: 8px 12px 8px 12px;
+                        gap: 8px;
+                        border-radius: 6px;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        background: var(--main-color);
+                        box-shadow: 0px 2px 2px 0px #00000026;
+                        font-size: 14px;
+                        font-weight: 600;
+                        line-height: 20px;
+                        color: #FFFFFF;
+                        border: none;
+
+                        svg {
+                            width: 14px;
+                            height: 14px;
+                        }
+                    }
+                }
+            }
+        }

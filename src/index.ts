@@ -11,7 +11,7 @@ function main(): void {
   const program = new Command();
 
   program
-    .name('penta-cli')
+    .name('@penta-cli')
     .description('Penta-B CLI - Generate templates for plugins, layouts, and more')
     .version(packageJson.version);
 

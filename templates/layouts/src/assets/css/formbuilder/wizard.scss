@@ -1,0 +1,171 @@
+ 
+
+    .penta-form,
+    .penta-smart-forms {
+
+        /* wizard */
+        .penta-wizard-container {
+
+            display: flex;
+            flex-direction: column;
+            padding: 6px;
+            gap: 12px;
+            border-radius: 6px;
+
+            label {
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 19.44px;
+                color: #121212;
+            }
+
+            .penta-wizard-head-container {
+                padding: 6px 12px;
+                gap: 12px;
+                border-radius: 6px;
+                display: flex;
+                flex-direction: column;
+                box-shadow: 0px 2px 2px 0px #00000040;
+                background: #F7F7F7;
+                position: -webkit-sticky;
+                position: sticky;
+                top: 83px;
+                z-index: 1;
+
+                .penta-button-circle-title-container {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+                    padding: 0 4px;
+                    align-items: center;
+
+                    label {
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 17.01px;
+                        color: #121212;
+                        white-space: nowrap;
+                    }
+
+                }
+
+                .penta-button-circle-title-container.active {
+                    border-bottom: 6px solid var(--penta-wizard-active-color);
+                }
+
+                .penta-button-circle-title-container.completed {
+                    button {
+                        background: var(--penta-wizard-completeColor);
+                        border-color: var(--penta-wizard-completeColor);
+
+                    }
+
+                    label {
+                        color: var(--penta-wizard-completeColor);
+                    }
+                }
+
+                .penta-button-circle-title-container.error {
+                    button {
+                        background: var(--main-error-color-bg);
+                        border-color: var(--main-error-color-bg);
+                    }
+
+                    label {
+                        color: var(--main-error-color-bg);
+                    }
+                }
+            }
+
+            .penta-wizard-head {
+                display: flex;
+                flex-direction: row;
+                gap: 36px;
+                align-items: center;
+                justify-content: space-between;
+                /* padding: 0px 30px; */
+
+                /* .fa-solid.fa-circle::before {
+                    content: "\f017";
+                } */
+
+                .penta-item-start,
+                .penta-item-end {
+                    border-radius: 50%;
+                    background: var(--main-color);
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    button {
+                        border: 0px;
+                        background: var(--main-color);
+                        color: white;
+                        width: 32px;
+                        height: 32px;
+                        padding: 0;
+                        border-radius: 50%;
+                    }
+                }
+
+                .penta-item-center {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 36px;
+                    overflow-x: auto;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .penta-button-circle {
+                        background: var(--sub-color-dark);
+                        color: white;
+                        /* padding: 8px; */
+                        border-radius: 50%;
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+            }
+
+            .penta-wizard-body {
+                border: .01px solid #f3f3f3;
+                border-radius: 8px;
+                border-top: 0;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+        }
+    }
+
+
+.ar  
+
+    .penta-form,
+    .penta-smart-forms {
+        .penta-wizard-container {
+
+            .penta-item-start,
+            .penta-item-end {
+                button:has(svg) {
+                    transform: rotate(180deg);
+                    svg {
+                        transform: none;
+                    }
+                }
+            }
+        }
+    }
+
+
+/** style for historical form **/
+.processHistory-modal-content  
+    .penta-form,
+    .penta-smart-forms {
+        /* wizard */
+        .penta-wizard-container {
+            .penta-wizard-head-container {
+                top: 0px;
+            }
+        }
+    }

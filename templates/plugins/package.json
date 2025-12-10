@@ -4,8 +4,8 @@
 	"description": "",
 	"main": "src/index.js",
 	"scripts": {
-		"prod": "cross-env NODE_ENV=production webpack --config webpack.js",
-		"dev": "cross-env ASSET_PATH=http://localhost:3001/test-plugin/ NODE_ENV=development webpack serve --config webpack.js",
+		"prod": "cross-env NODE_ENV=production webpack --config webpack.plugin.js",
+		"dev": "cross-env ASSET_PATH=http://localhost:3001/test-plugin/ NODE_ENV=development webpack serve --config webpack.plugin.js",
 		"build": "npm run prod",
 		"start": "npm run dev"
 	},
@@ -39,8 +39,7 @@
 		"webpack-cli": "^5.1.4",
 		"webpack-dev-server": "^5.1.0",
 		"webpack-merge": "^6.0.1",
-		"@penta-b/chakra-ui":"latest"
+		"@penta-b/chakra-ui": "latest"
 	},
-	"dependencies": {
-	}
+	"dependencies": {}
 }

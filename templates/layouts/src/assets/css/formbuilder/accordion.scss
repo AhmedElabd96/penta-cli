@@ -1,0 +1,61 @@
+ 
+
+    .penta-form,
+    .penta-smart-forms {
+        /* color: red !important;
+        background-color: red !important; */
+        .penta-accordion-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            .penta-accordion-item{
+                border-radius: 6px;
+                box-shadow: 0px 2px 2px 0px #00000040;
+                background: #F8F9FC;
+            }
+
+            .penta-accordion-item.penta-accordion-error {
+                border: 2px solid var(--main-error-color-bg);
+            }
+
+            .penta-accordion-head {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 6px 12px;
+                gap: 0px;
+                vertical-align: baseline;
+                /* background: var(--penta-accordion-head-bg);
+                box-shadow: 0px 2px 2px 0px var(--penta-accordion-head-shadow); */
+                color: var(--penta-accordion-head-fg);
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 19.44px;
+                border-radius: 6px;
+
+                label{
+                    margin: 0;
+                }
+
+                .penta-item-end{
+                    cursor: pointer;
+                }
+
+            }
+
+            .penta-accordion-head-open {
+                border-radius: 6px 6px 0 0;
+            }
+
+            .penta-accodion-body-open {
+                /* background: var(--penta-accordion-head-bg); */
+                border-radius: 0 0 6px 6px;
+
+                .penta-form.penta-smart-forms {
+                    padding: 0 14px;
+                }
+            }
+        }
+    }

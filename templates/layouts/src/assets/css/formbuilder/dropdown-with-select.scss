@@ -1,0 +1,89 @@
+ 
+
+    .penta-form,
+    .penta-smart-forms {
+        .penta-input-icon {
+            input {}
+        }
+
+        .penta-dropdown-with-search {
+            width: 100%;
+
+            .dropdown-toggle {
+                width: 100%;
+                height: var(--input-height);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                /* padding: var(--input-padding); */
+                padding: 8px 10px;
+                background: transparent;
+                border: var(--input-border);
+                border-radius: 4px;
+                font-size: var(--input-font-size);
+                font-weight: 600;
+                line-height: 16px;
+                color: var(--input-fg);
+                opacity: 0.8;
+
+                span {
+                    padding: 0px 6px;
+                    justify-content: start;
+                }
+            }
+
+            .dropdown-menus {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                padding: 5px 8px;
+                border: 1px solid #ccc;
+                border-radius: 0 0 4px 4px;
+                font-size: var(--input-font-size-m);
+                font-weight: 500;
+                line-height: 16px;
+                text-align: start;
+                color: var(--main-header-fg);
+                position: absolute;
+                top: var(--input-height);
+                background: var(--main-header-bg);
+                width: 100%;
+                z-index: 1;
+
+
+                .dropdown-input-group {
+                    width: 100%;
+
+                    input {
+                        border: 1px solid #ccc;
+                        text-align: start;
+                        background: #fff;
+                    }
+                }
+
+                ul {
+                    padding: 5px 8px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                    opacity: 0.8;
+                    max-height: 120px;
+                    overflow: auto;
+                    cursor: pointer;
+
+                    li {
+                        width: 100%;
+                        display: flex;
+                        justify-content: start;
+                        height: unset;
+                    }
+                }
+            }
+        }
+
+        .penta-dropdown-with-search.penta-inside-error {
+            .dropdown-toggle {
+                border: 0;
+            }
+        }
+    }

@@ -1,0 +1,89 @@
+ 
+
+    .penta-form,
+    .penta-smart-forms {
+
+        /* special case for grid */
+        .penta-table-container {
+            .penta-form-item:has(.items-upload) {
+                gap: 4px;
+            }
+        }
+
+        .penta-form-attachment-input {
+            padding: 2px 16px;
+            /**override default**/
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .items-upload {
+            display: flex;
+            flex-direction: row;
+            gap: 12px;
+            overflow: auto;
+
+            label {
+                font-size: 13px;
+            }
+        }
+
+        .img-scroll {
+            max-width: 200px;
+            /* border: var(--input-border); */
+            padding: 8px;
+            background: var(--main-bg-color);
+            box-shadow: 0px 2px 2px 0px #00000040;
+            border-radius: 4px;
+
+
+            .img-scroll-item {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                font-size: 12px;
+            }
+
+            .current-img-veiwer {
+                width: 100%;
+                border: var(--input-border);
+                border-radius: 4px;
+                height: 70px;
+            }
+
+            .veiwer-buttons-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 12px;
+
+                button {
+                    font-size: 12px;
+                    /* padding: 8px 12px; */
+                    /* border-radius: 50%; */
+                    border-radius: 4px;
+                    text-wrap: nowrap;
+                    color: var(--input-fg);
+                    border: 1px solid var(--input-fg);
+                    height: 20px;
+                    width: 20px;
+                    background: transparent;
+                }
+
+                button.view-img {
+                    width: auto;
+                    padding: 0px 4px;
+                }
+            }
+
+            label {
+                width: 100%;
+                text-align: center;
+                display: block !important;
+                /**to override inline style**/
+                margin: 0;
+                text-wrap: wrap;
+                word-break: break-all;
+            }
+        }
+    }
