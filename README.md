@@ -13,7 +13,7 @@ npm i git+https://jenkins.penta-b.net/pentabdev/penta-cli.git -g
 After installing globally, use npx to run the CLI:
 
 ```bash
-npx @penta-cli create plugin my-plugin
+npx penta-cli create plugin my-plugin
 ```
 
 ## Usage
@@ -21,12 +21,12 @@ npx @penta-cli create plugin my-plugin
 ### Create a New Plugin
 
 ```bash
-npx @penta-cli create plugin <plugin-name>
+npx penta-cli create plugin <plugin-name>
 ```
 
 **Example:**
 ```bash
-npx @penta-cli create plugin my-awesome-plugin
+npx penta-cli create plugin my-awesome-plugin
 cd my-awesome-plugin
 npm install
 npm run dev
@@ -41,12 +41,12 @@ This will:
 ### Create a New Layout
 
 ```bash
-npx @penta-cli create layout <layout-name>
+npx penta-cli create layout <layout-name>
 ```
 
 **Example:**
 ```bash
-npx @penta-cli create layout my-layout
+npx penta-cli create layout my-layout
 cd my-layout
 npm install
 npm run dev
