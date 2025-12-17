@@ -8,7 +8,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "dev": "tsc --watch"
+    "dev": "tsc --watch",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -22,11 +23,6 @@
   ],
   "author": "Penta-B",
   "license": "ISC",
-  "files": [
-    "dist",
-    "bin",
-    "templates"
-  ],
   "dependencies": {
     "chalk": "^4.1.2",
     "commander": "^11.0.0",
