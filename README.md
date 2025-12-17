@@ -4,29 +4,19 @@ A CLI tool to generate templates for Penta-B projects, including plugins, layout
 
 ## Installation
 
-### Global Installation from Git Repository
-```bash
-npm i git+https://jenkins.penta-b.net/pentabdev/penta-cli.git -g
-```
-
-### Using npx (Recommended)
-After installing globally, use npx to run the CLI:
-
-```bash
-npx penta-cli create plugin my-plugin
-```
+No installation required! Use `npx` to run the CLI directly from the git repository.
 
 ## Usage
 
 ### Create a New Plugin
 
 ```bash
-npx penta-cli create plugin <plugin-name>
+npx -y git+https://jenkins.penta-b.net/pentabdev/penta-cli.git create plugin <plugin-name>
 ```
 
 **Example:**
 ```bash
-npx penta-cli create plugin my-awesome-plugin
+npx -y git+https://jenkins.penta-b.net/pentabdev/penta-cli.git create plugin my-awesome-plugin
 cd my-awesome-plugin
 npm install
 npm run dev
@@ -41,12 +31,12 @@ This will:
 ### Create a New Layout
 
 ```bash
-npx penta-cli create layout <layout-name>
+npx -y git+https://jenkins.penta-b.net/pentabdev/penta-cli.git create layout <layout-name>
 ```
 
 **Example:**
 ```bash
-npx penta-cli create layout my-layout
+npx -y git+https://jenkins.penta-b.net/pentabdev/penta-cli.git create layout my-layout
 cd my-layout
 npm install
 npm run dev
