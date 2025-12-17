@@ -4,7 +4,7 @@
   "description": "A CLI tool to generate templates for Penta-B projects",
   "main": "dist/index.js",
   "bin": {
-    "@penta-cli": "./bin/cli.js"
+    "penta-cli": "./bin/cli.js"
   },
   "scripts": {
     "build": "tsc",
