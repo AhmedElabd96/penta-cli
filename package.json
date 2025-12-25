@@ -6,6 +6,12 @@
   "bin": {
     "penta-cli": "./bin/cli.js"
   },
+  "files": [
+    "bin",
+    "dist",
+    "templates",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
