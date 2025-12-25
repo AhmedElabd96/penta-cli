@@ -7,7 +7,7 @@ A CLI tool to generate templates for Penta-B projects, including plugins, layout
 Install globally from the git repository:
 
 ```bash
-npm i git+https://jenkins.penta-b.net/pentabdev/penta-cli.git -g
+npm i https://github.com/AhmedElabd96/penta-cli/tarball/dev -g
 ```
 
 This will install the `penta-cli` command globally on your system.
@@ -53,7 +53,7 @@ npm run dev
 To update to the latest version:
 
 ```bash
-npm i git+https://jenkins.penta-b.net/pentabdev/penta-cli.git -g
+npm i https://github.com/AhmedElabd96/penta-cli/tarball/dev -g
 ```
 
 ## Author
